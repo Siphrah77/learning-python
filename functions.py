@@ -33,3 +33,36 @@ division_results=division(9,3)
 print(division_results)
 
 
+# def is_divisible(x,y):
+#     if(x%y==0):
+#         return True
+#     return False
+# results=is_divisible(10,2)
+# print(f"Is Divisible={results}")
+
+
+def divisible(x,y):
+    if(x%y==0):
+        return f"{x} is divisible by {y}"
+    return f"{x} is not divisible by {y}"
+
+print("CHECK DIVISIBILTY BETWEEN 'X' AND 'Y'/n")
+print("Press 'x' to exit ")
+
+while (True):
+    x=input("input value for X:")
+    if x.upper()=="X":
+        break
+    y=input("input value for Y:")
+    
+    if x.isdigit() and y.isdigit():
+        input_x=int(x)
+        input_y=int(y)
+        results=divisible(input_x,input_y)
+        print(results)
+    else:
+        print("INVALID INPUTS,TRY AGAIN")
+
+
+
+
